@@ -7,7 +7,7 @@ class App extends Component {
 	constructor(props) {
     super(props);
     this.state = {
-      input: '# This is a text area' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '## Line breaks are not automatic' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'Heres some inline code, `<div></div>`.'  + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '```' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '// How bout multiline.'  + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'console.log("Hello, world.")' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '```' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'Look at this [link](https://www.freecodecamp.com)' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '**heyo bold**' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '- Got a bullet for lists.' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '> Block Quote!' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '![React Logo w/ Text](https://goo.gl/Umyytc)'
+      input: '# This rendered from a text area' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '## Line breaks, unfortunately, are not automatic in strings' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'Heres some inline code, `<div></div>`.'  + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '```' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '// How bout multiline.'  + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'console.log("Hello, world.")' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '```' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + 'Look at this [link](https://www.freecodecamp.com)' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '**heyo bold**' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '- Got a bullet for lists.' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '> Block Quote!' + String.fromCharCode(13, 10) + String.fromCharCode(13, 10) + '![React Logo w/ Text](https://goo.gl/Umyytc)'
     }
     this.handleChange = this.handleChange.bind(this);
 		this.getMarkdownText = this.getMarkdownText.bind(this);
@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-				<textarea id="editor" onChange={this.handleChange} cols="60" rows="30">
+				<textarea id="editor" onChange={this.handleChange} cols="60" rows="25">
 					{this.state.input}
 				</textarea>
 				<div id="preview" dangerouslySetInnerHTML={this.getMarkdownText(this.state.input)}>

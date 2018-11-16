@@ -3,11 +3,12 @@ body {
 }
 
 .App textarea {
-	width: 100%;	
+	width: 100%;
+	margin-top: 20px;
 }
 
 .App {
-	width: 80%;
+	width: 50%;
 	margin: 0 auto;
 }
 
