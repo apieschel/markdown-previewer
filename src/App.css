@@ -1,5 +1,14 @@
+body {
+	background-color: ghostwhite;
+}
+
+.App textarea {
+	width: 100%;	
+}
+
 .App {
-  text-align: center;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .App-logo {
